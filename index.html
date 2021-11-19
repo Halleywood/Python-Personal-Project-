@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/calendar.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <div class="navigationbar">
+            <div class="nav-block">
+                <img src="static/img/hamburger.png" alt="hamburgericon" height="80px">
+            </div>
+            <div class="nav-block">
+                <img src="static/img/commodities.png" alt="commodities" height="150px">
+            </div>
+            <div class="nav-block">
+                <button id="login">Login/Logout</button>
+            </div>
+        </div>
+        <div class="scrollbar">
+            <button class="links" id="silver-btn">SILVER</button>
+            <button class="links" id="gold-btn">GOLD</button>
+            <button class="links" id="copper-btn">COPPER</button>
+            <button class="links" id="crude-btn">CRUDE OIL</button>
+            <button class="links" id="cotton-btn">COTTON</button>
+            <button class="links" id="corn-btn">CORN</button>
+            <button class="links" id="soybean-btn">SOYBEANS</button>
+            <button class="links" id="meal-btn">SOYBEAN MEAL</button>
+            <button class="links" id="wheat-btn" >WHEAT</button>
+            <button class="links" id="oats-btn">OATS</button>
+            <button class="links" id="hogs-btn">HOGS</button>
+            <button class="links" id="cattle-btn">FEEDER CATTLE</button>
+        </div>
+        <div class="container">
+            <div class="column1">
+                <div class="displaytable">
+                    <h2 id="displayheader"></h2>
+                    <div class="displaydata"></div>
+                        <div class="displaydata2"></div>
+                        <p id="by_date"></p>
+                </div>
+            </div>
+                    <div class="column2">
+                        <div class="container_calendar">
+                                <div class="calendar">
+                                    <div class="month">
+                                        <i class="fas fa-angle-left prev"></i>
+                                        <div class="date">
+                                        <h1></h1>
+                                        <p></p>
+                                        </div>
+                                        <i class="fas fa-angle-right next"></i>
+                                    </div>
+                                    <div class="weekdays">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                    </div>
+                                    <div class="days"></div>
+                                </div>
+                            </div>
+                <form id="WORK">
+                    <div class="user-form">
+                    <h3>Join our mailing list!</h3>
+                    <div class="form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name">
+                        
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email">
+                        <p id="emails"></p>
+                    </div>
+                        <button type="submit" class="form-row form-button">Submit</button>
+                    </div>  
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/calendar.js') }}"></script>
+</body>
+
+</html>
